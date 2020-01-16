@@ -7,4 +7,4 @@ echo "<br>";
 echo $exchange, $array[0];
 echo "<br>";
 echo "test the string {$exchange}sadasdeasd";
-?>
+

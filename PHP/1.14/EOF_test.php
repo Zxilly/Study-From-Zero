@@ -4,4 +4,4 @@ echo <<<DESIGN
 DESIGN;
 echo "\n";
 echo "finish";
-?>
+
