@@ -8,6 +8,8 @@ using namespace std;
 
 int main(void)
 {
-    printf("Hello,world.");
+    int a;
+    scanf("%d",&a);
+    printf("Hello,%d.",a);
     return 0;
 }
