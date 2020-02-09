@@ -3,6 +3,8 @@
 //
 #include <bits/stdc++.h>
 
+using namespace std;
+
 int main()
 {
     int a;
@@ -11,4 +13,7 @@ int main()
     float d;
     double e;
     unsigned long long f;
+    int sum=0L;
+
+    cout<<sum<<endl;
 }
