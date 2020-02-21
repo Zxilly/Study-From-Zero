@@ -13,9 +13,10 @@ int main() {
     double e;
     unsigned long long f;
     int sum = 0L;
-    _Bool booltype = 1;
-    _Bool booltest = 5;
-    cout << booltest << " " << booltype << endl;
+    bool booltype1 = true;
+    _Bool booltype2 = 1;
+    _Bool booltype3 = 5;
+    cout << booltype1 << " " << booltype2 << booltype3 << endl;
 
     cout << sum << endl;
 }
