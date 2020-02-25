@@ -6,8 +6,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     bool True = true;
     bool False = false;
     bool judge = True or False;  // and == &&, or == ||, ! == not

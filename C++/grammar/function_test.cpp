@@ -3,12 +3,19 @@
 //
 #include <bits/stdc++.h>
 
-void test(int a,int b)
-{
-    printf("%d",a+b);
+void test(int a, int b) {
+    printf("%d", a + b);
 }
 
-int main()
-{
-    test(3,4);
+void plusone(int a) {
+    printf("%d %p\n", a, &a);
+    //char b[10000000000000000];
+    if (a < 5)
+        plusone(a + 1);
+
+    printf("%d %p\n", a, &a);
+}
+
+int main() {
+    plusone(1);
 }

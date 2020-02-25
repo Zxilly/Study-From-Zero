@@ -6,6 +6,11 @@ e = ('Google', 'Microsoft', 'Amazon', 'Apple')  # 元组
 f = {1: 'Google', 2: 'Microsoft', 3: 'Amazon', 4: 'Apple'}  # 字典
 g = {'Google', 'Microsoft', 'Amazon', 'Apple'}  # 集合
 
+dict = {1:'a',2:'b'}
+
+set = set()
+
+set.add(dict)
 # print("set is ",a)
 
 # a[1] = "Windows"

@@ -7,10 +7,9 @@
 
 char str[100];
 
-int main()
-{
-    scanf("%s",str);
-    printf("%d %d\n", sizeof(str),strlen(str));
-    printf("%d %d",sizeof(STRING),strlen(STRING));
+int main() {
+    scanf("%s", str);
+    printf("%d %d\n", sizeof(str), strlen(str));
+    printf("%d %d", sizeof(STRING), strlen(STRING));
     return 0;
 }

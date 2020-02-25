@@ -5,9 +5,8 @@
 
 char string[200];
 
-int main()
-{
+int main() {
     printf("Input a string");
-    scanf("%s",string);
-    printf("%s",string);
+    scanf("%s", string);
+    printf("%s", string);
 }
