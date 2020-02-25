@@ -14,9 +14,14 @@ int changenum(int *a, int *b) {
 
 int main() {
     int a = 5, b = 3;
+    changenum(&a, &b);
+
     int *pi, *pt;
     char *pc;
     float *pf, *pg;
-    changenum(&a, &b);
-    printf("%d %d", a, b);
+
+    int array[20];
+
+    //printf("%d %d", a, b);
+    printf("%d",array==&array[0]);
 }
