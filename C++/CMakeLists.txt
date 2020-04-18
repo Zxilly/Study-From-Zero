@@ -17,5 +17,9 @@ add_executable(function_test Grammar/C/function_test.cpp)
 add_executable(input_test Grammar/C/input_test.cpp)
 add_executable(pointer_test Grammar/C/pointer_test.cpp)
 add_executable(array_test Grammar/C/array_test.c)
-add_executable(a Work/3.25/a.cpp)
-add_executable(b Work/3.25/b.cpp)
+#add_executable(a Work/3.25/a.cpp)
+#add_executable(b Work/3.25/b.cpp)
+
+
+add_executable(LQ_4.18_A Contest/LQ/4.18/LQ_4.18_A.cpp)
+add_executable(LQ_4.18_B Contest/LQ/4.18/LQ_4.18_B.cpp)
