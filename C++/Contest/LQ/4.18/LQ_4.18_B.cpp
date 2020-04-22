@@ -5,11 +5,10 @@
 
 using namespace std;
 
-char encrypt(char str[300])
+char *encrypt(char str[300])
 {
     int strlength;
     strlength = int(strlen(str));
-    //printf("%d",strlength);
     for(int i=0;i<strlength;i++)
     {
         str[i]+=3;
@@ -17,15 +16,13 @@ char encrypt(char str[300])
         {
             str[i]-=26;
         }
-        printf("%c",str[i]);
     }
-    return 0;
+    return str;
 }
 
 int main()
 {
     char input[300];
     scanf("%s",&input);
-    encrypt(input);
-    return 0;
+    printf("%s",encrypt(input));
 }

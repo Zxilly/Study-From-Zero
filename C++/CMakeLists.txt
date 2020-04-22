@@ -23,3 +23,5 @@ add_executable(array_test Grammar/C/array_test.c)
 
 add_executable(LQ_4.18_A Contest/LQ/4.18/LQ_4.18_A.cpp)
 add_executable(LQ_4.18_B Contest/LQ/4.18/LQ_4.18_B.cpp)
+add_executable(LQ_4.18_C Contest/LQ/4.18/LQ_4.18_C.cpp)
+add_executable(LQ_4.18_D Contest/LQ/4.18/LQ_4.18_D.cpp)
