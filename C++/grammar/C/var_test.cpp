@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    int a;
+    int a = 0;
     long b;
     long long c;
     float d;
@@ -14,7 +14,7 @@ int main() {
     unsigned long long f;
     int sum = 0L;
     bool booltype1 = true;
-    _Bool booltype2 = 1;
+    _Bool booltype2 = true;
     _Bool booltype3 = 5;
     cout << booltype1 << " " << booltype2 << booltype3 << endl;
 
