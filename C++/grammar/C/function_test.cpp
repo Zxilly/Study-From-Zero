@@ -16,6 +16,11 @@ void plusone(int a) {
     printf("%d %p\n", a, &a);
 }
 
+void justprint(void)//标明不需要参数
+{
+    printf("no need for input");
+}
+
 int main() {
     plusone(1);
 }

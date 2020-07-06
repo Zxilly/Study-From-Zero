@@ -17,11 +17,15 @@ int main() {
     changenum(&a, &b);
 
     int *pi, *pt;
-    char *pc;
+    //char *pc;
     float *pf, *pg;
 
     int array[20];
 
     //printf("%d %d", a, b);
-    printf("%d",array==&array[0]);
+    //printf("%d",array==&array[0]);
+    int c=5;
+    int *pc=&c;
+    printf("%p %p",pc,&pc);
+
 }
