@@ -5,6 +5,6 @@
 
 int main()
 {
-
+    int const_var = 0;
     return 0;
 }
