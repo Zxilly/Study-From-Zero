@@ -9,10 +9,10 @@ public class rockPaperScissors {
     private static final Map<Integer, String> myMap;
 
     static {
-        myMap = new HashMap<Integer, String>();
+        myMap = new HashMap<>();
         myMap.put(0, "石头");
         myMap.put(1, "剪刀");
-        myMap.put(2,"布");
+        myMap.put(2, "布");
     }
 
     private static String judge(int aiChoice, int playerChoice) {
@@ -34,14 +34,14 @@ public class rockPaperScissors {
 
     private static void rpsAI(int userChoice) {
         int rpsAIchoice = rand.nextInt(3);
-        System.out.printf("你出了 %s，电脑出了 %s\n",myMap.get(userChoice),myMap.get(rpsAIchoice));
+        System.out.printf("你出了 %s，电脑出了 %s\n", myMap.get(userChoice), myMap.get(rpsAIchoice));
         System.out.println(judge(rpsAIchoice, userChoice));
     }
 
     public static void main(String[] args) {
         System.out.println("石头剪刀布（输入9退出）");
         System.out.println("石头：0，剪刀：1，布：2");
-        while(true){
+        while (true) {
             System.out.println("请出手势：");
             int input = reader.nextInt();
             switch (input) {
@@ -55,7 +55,7 @@ public class rockPaperScissors {
                 default:
                     System.out.println("输入不合法");
             }
-            if(input==9){
+            if (input == 9) {
                 break;
             }
         }
