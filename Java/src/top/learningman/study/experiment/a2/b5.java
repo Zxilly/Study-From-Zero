@@ -38,18 +38,18 @@ public class b5 {
     static void drawCalendar(int year, int month) {
         int allDays = getYearDays(year) + getMonthDaysInYear(isLeapYear(year), month) + 1;
         // System.out.println(allDays);
-        int startWeekDay = allDays%7;
+        int startWeekDay = allDays % 7;
         int weekDay = startWeekDay;
         System.out.println("一\t二\t三\t四\t五\t六\t日");
-        for(int i=1;i<startWeekDay;i++){
+        for (int i = 1; i < startWeekDay; i++) {
             System.out.print("\t");
         }
-        for(int i=1;i<=getMonthDays(isLeapYear(year),month);i++){
-            System.out.print(i+"\t");
-            if(weekDay==7){
+        for (int i = 1; i <= getMonthDays(isLeapYear(year), month); i++) {
+            System.out.print(i + "\t");
+            if (weekDay == 7) {
                 System.out.print("\n");
-                weekDay=1;
-            }else{
+                weekDay = 1;
+            } else {
                 weekDay++;
             }
         }
@@ -57,7 +57,7 @@ public class b5 {
 
     public static void main(String[] args) {
         System.out.println("请输入年月，用空格分隔：");
-        drawCalendar(in.nextInt(),in.nextInt());
+        drawCalendar(in.nextInt(), in.nextInt());
     }
 
 
