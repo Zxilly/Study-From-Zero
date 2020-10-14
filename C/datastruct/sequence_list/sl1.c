@@ -4,27 +4,27 @@
 
 #include <stdio.h>
 
-#define ListSize 100      //ÏßĞÔ±íµÄ×î´ó³¤¶È
+#define ListSize 100      //çº¿æ€§è¡¨çš„æœ€å¤§é•¿åº¦
 typedef int DataType;
 
 typedef struct {
-    DataType data[ListSize];   //ÓÃÊı×é´æ´¢ÏßĞÔ±íÖĞµÄÔªËØ
-    DataType length;           //Ë³Ğò±íµÄ³¤¶È
+    DataType data[ListSize];   //ç”¨æ•°ç»„å­˜å‚¨çº¿æ€§è¡¨ä¸­çš„å…ƒç´ 
+    DataType length;           //é¡ºåºè¡¨çš„é•¿åº¦
 } SeqList, *PSeqList;
 
-void InitList(PSeqList L);  //Ë³Ğò±íµÄ³õÊ¼»¯²Ù×÷
-int LengthList(PSeqList L); //ÇóË³Ğò±íµÄ³¤¶È
-int GetData(PSeqList L, int i); //·µ»ØÊı¾İ±íÖĞµÚi¸öÔªËØµÄÖµ
-int InsList(PSeqList L, int i, DataType e);   //ÔÚË³Ğò±íµÄµÚi¸öÎ»ÖÃ²åÈëÔªËØ
-int DelList(PSeqList L, DataType i, DataType *e); //É¾³ıË³Ğò±íLµÄµÚi¸öÊı¾İÔªËØ
-int Locate(PSeqList L, DataType e); //²éÕÒÊı¾İÔªËØeÔÚ±íÖĞµÄÎ»ÖÃ
-void PushFront(PSeqList L, DataType e); //Í·²å£¬ÔÚ±íÍ·²åÈëÔªËØe
-void PopFront(PSeqList L);    //Í·É¾,É¾³ı±íÖĞµÄµÚÒ»¸öÔªËØ
-void PushBack(PSeqList L, DataType e);  //Î²²å£¬ÔÚ±íÎ²²åÈëÔªËØe
-void PopBack(PSeqList L); //Î²É¾£¬É¾³ı±íÎ²ÔªËØ
-void ClearList(PSeqList L);  //Çå¿ÕË³Ğò±í
-int EmptyList(PSeqList L);   //ÅĞ¶ÏË³Ğò±íÊÇ·ñÎª¿Õ
-void PrintList(PSeqList L);  //´òÓ¡±íÖĞÔªËØ
+void InitList(PSeqList L);  //é¡ºåºè¡¨çš„åˆå§‹åŒ–æ“ä½œ
+int LengthList(PSeqList L); //æ±‚é¡ºåºè¡¨çš„é•¿åº¦
+int GetData(PSeqList L, int i); //è¿”å›æ•°æ®è¡¨ä¸­ç¬¬iä¸ªå…ƒç´ çš„å€¼
+int InsList(PSeqList L, int i, DataType e);   //åœ¨é¡ºåºè¡¨çš„ç¬¬iä¸ªä½ç½®æ’å…¥å…ƒç´ 
+int DelList(PSeqList L, DataType i, DataType *e); //åˆ é™¤é¡ºåºè¡¨Lçš„ç¬¬iä¸ªæ•°æ®å…ƒç´ 
+int Locate(PSeqList L, DataType e); //æŸ¥æ‰¾æ•°æ®å…ƒç´ eåœ¨è¡¨ä¸­çš„ä½ç½®
+void PushFront(PSeqList L, DataType e); //å¤´æ’ï¼Œåœ¨è¡¨å¤´æ’å…¥å…ƒç´ e
+void PopFront(PSeqList L);    //å¤´åˆ ,åˆ é™¤è¡¨ä¸­çš„ç¬¬ä¸€ä¸ªå…ƒç´ 
+void PushBack(PSeqList L, DataType e);  //å°¾æ’ï¼Œåœ¨è¡¨å°¾æ’å…¥å…ƒç´ e
+void PopBack(PSeqList L); //å°¾åˆ ï¼Œåˆ é™¤è¡¨å°¾å…ƒç´ 
+void ClearList(PSeqList L);  //æ¸…ç©ºé¡ºåºè¡¨
+int EmptyList(PSeqList L);   //åˆ¤æ–­é¡ºåºè¡¨æ˜¯å¦ä¸ºç©º
+void PrintList(PSeqList L);  //æ‰“å°è¡¨ä¸­å…ƒç´ 
 
 void InitList(PSeqList L) {
     if (L == NULL) {
@@ -51,10 +51,10 @@ int GetData(PSeqList L, int i) {
 
 int InsList(PSeqList L, int i, DataType e) {
     if (i < 1 || L->length > LengthList(L) + 1) {
-        printf("Î»ÖÃ²»ºÏ·¨\n");
+        printf("ä½ç½®ä¸åˆæ³•\n");
         return 0;
     } else if (L->length >= ListSize) {
-        printf("±íÒÑÂú\n");
+        printf("è¡¨å·²æ»¡\n");
         return 0;
     } else {
         for (int k = L->length; k >= i; k--) {
@@ -70,7 +70,7 @@ int InsList(PSeqList L, int i, DataType e) {
 
 int DelList(PSeqList L, DataType i, DataType *e) {
     if (L->length < 1) {
-        printf("±íÎª¿Õ£¡\n");
+        printf("è¡¨ä¸ºç©ºï¼\n");
         return 0;
     }
     *e = L->data[i - 1];
@@ -84,7 +84,7 @@ int DelList(PSeqList L, DataType i, DataType *e) {
 int Locate(PSeqList L, DataType e) {
     for (int k = 0; k < L->length; k++) {
         if (L->data[k] == e) {
-            //kÎªe¶ÔÓ¦µÄÊı×éÏÂ±ê£¬ÔÚ±íÖĞ¶ÔÓ¦ĞòºÅÓ¦Îªk+1
+            //kä¸ºeå¯¹åº”çš„æ•°ç»„ä¸‹æ ‡ï¼Œåœ¨è¡¨ä¸­å¯¹åº”åºå·åº”ä¸ºk+1
             return k + 1;
         }
     }
@@ -93,7 +93,7 @@ int Locate(PSeqList L, DataType e) {
 
 void PushFront(PSeqList L, DataType e) {
     if (L->length == ListSize) {
-        printf("Ë³Ğò±íÒÑÂú£¬²»ÄÜ²åÈë£¡\n");
+        printf("é¡ºåºè¡¨å·²æ»¡ï¼Œä¸èƒ½æ’å…¥ï¼\n");
     }
     for (int k = L->length; k > 0; k--) {
         L->data[k] = L->data[k - 1];
@@ -104,7 +104,7 @@ void PushFront(PSeqList L, DataType e) {
 
 void PopFront(PSeqList L) {
     if (EmptyList(L)) {
-        printf("Ë³Ğò±íÎª¿Õ£¬²»ÄÜ²åÈë£¡\n");
+        printf("é¡ºåºè¡¨ä¸ºç©ºï¼Œä¸èƒ½æ’å…¥ï¼\n");
     }
     for (int k = 1; k <= L->length - 1; k++) {
         L->data[k - 1] = L->data[k];
@@ -114,7 +114,7 @@ void PopFront(PSeqList L) {
 
 void PushBack(PSeqList L, DataType e) {
     if (L->length == ListSize) {
-        printf("Ë³Ğò±íÒÑÂú£¬²»ÄÜ²åÈë!\n");
+        printf("é¡ºåºè¡¨å·²æ»¡ï¼Œä¸èƒ½æ’å…¥!\n");
     }
     L->data[L->length] = e;
     L->length++;
@@ -123,7 +123,7 @@ void PushBack(PSeqList L, DataType e) {
 
 void PopBack(PSeqList L) {
     if (EmptyList(L)) {
-        printf("±íÎª¿Õ£¡\n");
+        printf("è¡¨ä¸ºç©ºï¼\n");
     }
     L->length--;
 
@@ -142,7 +142,7 @@ int EmptyList(PSeqList L) {
 
 void PrintList(PSeqList L) {
     if (EmptyList(L)) {
-        printf("±íÎª¿Õ£¡\n");
+        printf("è¡¨ä¸ºç©ºï¼\n");
         return;
     }
     for (int k = 0; k < L->length; k++) {
@@ -160,32 +160,32 @@ int main() {
     PushBack(&L, 5);
     PushBack(&L, 6);
     PushBack(&L, 7);
-    printf("Î²²å5¸öÊı×Ö 3 4 5 6 7\n");
+    printf("å°¾æ’5ä¸ªæ•°å­— 3 4 5 6 7\n");
     PrintList(&L);
-    printf("ÔÚ2²åÈë5 \n");
+    printf("åœ¨2æ’å…¥5 \n");
     InsList(&L, 2, 5);
     PrintList(&L);
-    printf("É¾³ı3£¬»ñÈ¡Öµ\n");
+    printf("åˆ é™¤3ï¼Œè·å–å€¼\n");
     DelList(&L,3,&data);
     PrintList(&L);
     printf("%d\n",data);
-    printf("Í·²å 1 2 3 4 5\n");
+    printf("å¤´æ’ 1 2 3 4 5\n");
     PushFront(&L,1);
     PushFront(&L,2);
     PushFront(&L,3);
     PushFront(&L,4);
     PushFront(&L,5);
     PrintList(&L);
-    printf("¶¨Î»1\n");
+    printf("å®šä½1\n");
     PrintList(&L);
     printf("%d\n",Locate(&L,1));
-    printf("Í·É¾\n");
+    printf("å¤´åˆ \n");
     PopFront(&L);
     PrintList(&L);
-    printf("Î²É¾\n");
+    printf("å°¾åˆ \n");
     PopBack(&L);
     PrintList(&L);
-    printf("É¾³ı\n");
+    printf("åˆ é™¤\n");
     ClearList(&L);
     PrintList(&L);
 
@@ -197,7 +197,7 @@ int main() {
     for(int i=5;i<=15;i++){
         PushBack(&M,i);
     }
-    printf("Éú³ÉÁ½¸öË³Ğò±í\n");
+    printf("ç”Ÿæˆä¸¤ä¸ªé¡ºåºè¡¨\n");
     PrintList(&L);
     PrintList(&M);
 
@@ -209,7 +209,7 @@ int main() {
         }
     }
 
-    printf("È¥ÖØºÏ²¢\n");
+    printf("å»é‡åˆå¹¶\n");
     PrintList(&N);
 
     SeqList O;
@@ -237,7 +237,7 @@ int main() {
         }
     }
 
-    printf("²»È¥ÖØºÏ²¢\n");
+    printf("ä¸å»é‡åˆå¹¶\n");
     PrintList(&O);
 
     return 0;
