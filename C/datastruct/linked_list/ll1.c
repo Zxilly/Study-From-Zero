@@ -3,6 +3,11 @@
 //
 
 
+#define output PrintList(&l);
+#define p(str) printf(#str);printf("\n");
+
+#define MAXN 1000000007
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -15,105 +20,150 @@ typedef struct SListNode {
 
 typedef struct PList {
     PListNode head;
-} List;
+} List, *PList;
 
 PListNode newNode(NodeDataType e) {
-    PListNode tmp = (PListNode) malloc(sizeof(PListNode));
+    PListNode tmp = (PListNode) malloc(sizeof(ListNode));
     tmp->data = e;
     tmp->next = NULL;
     return tmp;
 }
 
 
-void ListInit(List *l) {
+void ListInit(PList l) {
     l->head = NULL;
 }
 
-void PushBack(List l, NodeDataType e) {
+void PushBack(PList l, NodeDataType e) {
     PListNode pNewNode = newNode(e);
-    if (l.head == NULL) {
-        l.head = pNewNode;
+    //printf("%d",pNewNode->data);
+    if (l->head == NULL) {
+        l->head = pNewNode;
+        //printf("run");
         return;
     }
-    PListNode pCurrentNode = l.head->next;
-    while (pCurrentNode->next) {
-        pCurrentNode = pCurrentNode->next;
-    }
-    pCurrentNode->next = pNewNode;
-
-}
-
-void PopBack(List l) {
-    if (l.head == NULL) {
-        printf("Error: List is empty.Operation is not permitted.");
-        return;
-    }
-    PListNode pCurrentNode = l.head;
-    while (pCurrentNode->next) {
-        pCurrentNode = pCurrentNode->next;
-    }
-    free(pCurrentNode->next);
-    pCurrentNode->next = NULL;
-}
-
-void PushFront(List l, NodeDataType e) {
-    PListNode pNewNode = newNode(e);
-    if (l.head == NULL) {
-        l.head = pNewNode;
-        return;
-    }
-    pNewNode->next = l.head;
-    l.head = pNewNode;
-}
-
-void PopFront(List l) {
-    if (l.head == NULL) {
-        printf("Error: List is empty.Operation is not permitted.");
-        return;
-    }
-    if (l.head->next == NULL) {
-        free(l.head);
-        l.head = NULL;
+    if(l->head->next){
+        PListNode pCurrentNode = l->head->next;
+        while (pCurrentNode->next) {
+            pCurrentNode = pCurrentNode->next;
+        }
+        pCurrentNode->next = pNewNode;
     } else {
-        PListNode tmp = l.head;
-        l.head=l.head->next;
+        l->head->next = pNewNode;
+    }
+}
+
+void PopBack(PList l) {
+    if (l->head == NULL) {
+        printf("Error: List is empty.Operation is not permitted.");
+        return;
+    } else {
+        PListNode pCurrentNode = l->head;
+        while (pCurrentNode->next->next){
+            pCurrentNode = pCurrentNode->next;
+        }
+        free(pCurrentNode->next);
+        pCurrentNode->next=NULL;
+    }
+}
+
+void PushFront(PList l, NodeDataType e) {
+    PListNode pNewNode = newNode(e);
+    if (l->head == NULL) {
+        l->head = pNewNode;
+        return;
+    }
+    pNewNode->next = l->head;
+    l->head = pNewNode;
+}
+
+void PopFront(PList l) {
+    if (l->head == NULL) {
+        printf("Error: List is empty.Operation is not permitted.");
+        return;
+    }
+    if (l->head->next == NULL) {
+        free(l->head);
+        l->head = NULL;
+    } else {
+        PListNode tmp = l->head;
+        l->head=l->head->next;
         free(tmp);
     }
 }
 
-void InsertNode(List l,int i,NodeDataType e){ //插入值从1开始
-    int count=0;
-    PListNode preNode = l.head;
-    while(preNode){
+void InsertNode(PList l,int i,NodeDataType e){ //插入值从1开始
+    int count=1;
+    PListNode perNode = l->head;
+    while(perNode){
         if(count++==i-1){
-            break;
+            PListNode new = newNode(e);
+            new->next=perNode->next;
+            perNode->next=new;
+            return;
         } else {
-            preNode = preNode->next;
+            perNode = perNode->next;
         }
     }
-
+    printf("Error: Index out of range.\n");
 }
 
-void PrintList(List l) {
-    PListNode pCurrentNode = l.head;
-    printf("%d",pCurrentNode->data);
+NodeDataType DelNode(PList l,int i){
+    int count=1;
+    PListNode perNode = l->head;
+    while(perNode){
+        if(count++==i-1){
+            PListNode tmp=perNode->next;
+            NodeDataType e = perNode->next->data;
+            perNode->next=perNode->next->next;
+            free(tmp);
+            return e;
+        } else {
+            perNode = perNode->next;
+        }
+    }
+    printf("Error: Index out of range.\n");
+    return MAXN;
+}
+
+void PrintList(PList l) {
+    PListNode pCurrentNode = l->head;
     while (pCurrentNode) {
-        printf("%d\t", pCurrentNode->data);
+        printf("%-4d", pCurrentNode->data);
         if (pCurrentNode->next) {
             pCurrentNode = pCurrentNode->next;
         } else {
             break;
         }
     }
+    printf("\n");
 }
 
 int main(void){
     List l;
     ListInit(&l);
     for(int i=1;i<=10;i++){
-        PushBack(l,i);
+        PushBack(&l,i);
         //printf("%d",i);
     }
-    printf("ok");
-    PrintList(l);
+    p(尾插10个数)
+    //printf("ok");
+    output
+    for(int i=20;i>10;i--){
+        PushFront(&l,i);
+    }
+    p(头插10个数)
+    output
+    PopBack(&l);
+    p(尾删)
+    output
+    PopFront(&l);
+    p(头删)
+    output
+    InsertNode(&l,2,27);
+    p(在2插入27)
+    output
+    p(删除3并输出节点值)
+    printf("%d\n",DelNode(&l,3));
+    output
 }
