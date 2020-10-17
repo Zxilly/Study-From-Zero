@@ -166,4 +166,5 @@ int main(void){
     p(删除3并输出节点值)
     printf("%d\n",DelNode(&l,3));
     output
+    return 0;
 }
