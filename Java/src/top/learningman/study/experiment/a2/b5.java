@@ -39,7 +39,13 @@ public class b5 {
         int allDays = getYearDays(year) + getMonthDaysInYear(isLeapYear(year), month) + 1;
         // System.out.println(allDays);
         int startWeekDay = allDays % 7;
-        int weekDay = startWeekDay;
+        int weekDay;
+        if(startWeekDay==0){
+            weekDay = 7;
+            startWeekDay = 7;
+        } else {
+            weekDay = startWeekDay;
+        }
         System.out.println("一\t二\t三\t四\t五\t六\t日");
         for (int i = 1; i < startWeekDay; i++) {
             System.out.print("\t");
