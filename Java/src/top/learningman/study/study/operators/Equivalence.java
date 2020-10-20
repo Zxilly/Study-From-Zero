@@ -1,6 +1,4 @@
-package top.learningman.study.operators;
-
-import java.util.*;
+package top.learningman.study.study.operators;
 
 public class Equivalence {
     public static void main (String[] args){

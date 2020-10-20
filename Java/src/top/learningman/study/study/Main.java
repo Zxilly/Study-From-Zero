@@ -1,4 +1,4 @@
-package top.learningman.study;
+package top.learningman.study.study;
 
 import java.util.*;
 

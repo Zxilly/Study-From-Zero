@@ -1,4 +1,4 @@
-package top.learningman.study.operators;
+package top.learningman.study.study.operators;
 
 public class ScientificNotation {
     public static void main(String[] args){
