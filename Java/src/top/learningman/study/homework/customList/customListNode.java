@@ -34,4 +34,9 @@ public class customListNode {
     public void setNext(customListNode next) {
         this.next = next;
     }
+
+    @Override
+    public String toString(){
+        return this.data+"";
+    }
 }
