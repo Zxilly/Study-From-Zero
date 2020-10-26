@@ -17,5 +17,7 @@ public class Student {
         this.department=department;
     }
 
-    
+    public String toString(){
+        return this.name+' '+this.id+' '+this.department;
+    }
 }
