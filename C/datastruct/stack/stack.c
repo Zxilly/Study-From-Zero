@@ -63,9 +63,14 @@ DataType get(PSqStack s){
     }
 }
 
+void print(PSqStack s){
+
+}
+
 DataType StackLength(PSqStack s){
     return s->top-s->base;
 }
+
 
 
 int main(void){
