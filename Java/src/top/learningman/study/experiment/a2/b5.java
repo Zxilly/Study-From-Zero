@@ -65,6 +65,4 @@ public class b5 {
         System.out.println("请输入年月，用空格分隔：");
         drawCalendar(in.nextInt(), in.nextInt());
     }
-
-
 }
