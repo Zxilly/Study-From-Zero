@@ -3,7 +3,7 @@
 double getPrime(int x, int n)
 {
     double resp = 1;
-    for (int I = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         resp *= x;
     }
@@ -32,7 +32,7 @@ int main(void)
     double ans = 0;
     printf("Wait for input:");
     scanf("%d %d", &x, &n);
-    for (int I = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         printf("%d %d\n", x, i);
         ans += getXn(x, i);
