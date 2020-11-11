@@ -139,6 +139,10 @@ void PrintList(PList l) {
     printf("\n");
 }
 
+int isEmpty(PList l) {
+    return l->head==NULL;
+}
+
 int main(void){
     List l;
     ListInit(&l);
@@ -166,5 +170,45 @@ int main(void){
     p(删除3并输出节点值)
     printf("%d\n",DelNode(&l,3));
     output
+    free(&l);
+
+    List a,b;
+    ListInit(&a);
+    ListInit(&b);
+    for(int i=1;i<=10;i++){
+        PushBack(&a,i);
+    }
+    for(int i=6;i<=15;i++){
+        PushBack(&b,i);
+    }
+    p(获得两个单链表)
+    PrintList(&a);
+    PrintList(&b);
+    List c;
+    ListInit(&c);
+    while(!isEmpty(&a)&&!isEmpty(&b)){
+        if(a.head->data<=b.head->data){
+            PushBack(&c,a.head->data);
+            PopFront(&a);
+        } else {
+            PushBack(&c,b.head->data);
+            PopFront(&b);
+        }
+    }
+    if(!isEmpty(&a)){
+        while(!isEmpty(&a)){
+            PushBack(&c,a.head->data);
+            PopFront(&a);
+            p(test)
+        }
+    } else {
+        while(!isEmpty(&b)){
+            PushBack(&c,b.head->data);
+            PopFront(&b);
+        }
+    }
+    p(合并后的C)
+    PrintList(&c);
+
     return 0;
 }
