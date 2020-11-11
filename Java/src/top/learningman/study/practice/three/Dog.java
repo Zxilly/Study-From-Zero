@@ -25,6 +25,11 @@ class DogBig {
         System.out.println(name);
         System.out.println(says);
     }
+
+    @Override
+    public String toString(){
+        return name+":"+says;
+    }
 }
 
 public class Dog {

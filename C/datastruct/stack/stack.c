@@ -26,6 +26,7 @@ void push(PSqStack s,DataType e){
     if(s->top-s->base>=s->stack_size){
         s->base = (DataType*)realloc(s->base,(s->stack_size+STACK_INCREMENT)*sizeof(DataType));
         s->top = s->base+s->stack_size;
+        s->stack_size+=STACK_INCREMENT;
     }
     *s->top = e;
     s->top++;
@@ -63,23 +64,29 @@ DataType get(PSqStack s){
     }
 }
 
-void print(PSqStack s){
-
-}
 
 DataType StackLength(PSqStack s){
     return s->top-s->base;
 }
 
+void printStack(PSqStack s){
+    for(DataType *i=s->top-1;i>=s->base;i--){
+        printf("%4d ",*i);
+    }
+    printf("\n");
+}
 
 
 int main(void){
     SqStack a;
     init(&a);
-    push(&a,3);
-    push(&a,4);
-    printf("%d\n",StackLength(&a));
+    for(int i=1;i<=1001;i++){
+        push(&a,i);
+    }
+    printf("%d",a.stack_size);
+    printf("length is %d\n",StackLength(&a));
     printf("%d\n",get(&a));
+    printStack(&a);
     printf("%d\n",pop(&a));
     printf("%d\n",pop(&a));
 }
