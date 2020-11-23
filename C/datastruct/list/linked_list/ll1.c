@@ -42,7 +42,7 @@ void PushBack(PList l, NodeDataType e) {
         //printf("run");
         return;
     }
-    if(l->head->next){
+    if (l->head->next) {
         PListNode pCurrentNode = l->head->next;
         while (pCurrentNode->next) {
             pCurrentNode = pCurrentNode->next;
@@ -59,11 +59,11 @@ void PopBack(PList l) {
         return;
     } else {
         PListNode pCurrentNode = l->head;
-        while (pCurrentNode->next->next){
+        while (pCurrentNode->next->next) {
             pCurrentNode = pCurrentNode->next;
         }
         free(pCurrentNode->next);
-        pCurrentNode->next=NULL;
+        pCurrentNode->next = NULL;
     }
 }
 
@@ -87,19 +87,19 @@ void PopFront(PList l) {
         l->head = NULL;
     } else {
         PListNode tmp = l->head;
-        l->head=l->head->next;
+        l->head = l->head->next;
         free(tmp);
     }
 }
 
-void InsertNode(PList l,int i,NodeDataType e){ //插入值从1开始
-    int count=1;
+void InsertNode(PList l, int i, NodeDataType e) { //插入值从1开始
+    int count = 1;
     PListNode perNode = l->head;
-    while(perNode){
-        if(count++==i-1){
+    while (perNode) {
+        if (count++ == i - 1) {
             PListNode new = newNode(e);
-            new->next=perNode->next;
-            perNode->next=new;
+            new->next = perNode->next;
+            perNode->next = new;
             return;
         } else {
             perNode = perNode->next;
@@ -108,14 +108,14 @@ void InsertNode(PList l,int i,NodeDataType e){ //插入值从1开始
     printf("Error: Index out of range.\n");
 }
 
-NodeDataType DelNode(PList l,int i){
-    int count=1;
+NodeDataType DelNode(PList l, int i) {
+    int count = 1;
     PListNode perNode = l->head;
-    while(perNode){
-        if(count++==i-1){
-            PListNode tmp=perNode->next;
+    while (perNode) {
+        if (count++ == i - 1) {
+            PListNode tmp = perNode->next;
             NodeDataType e = perNode->next->data;
-            perNode->next=perNode->next->next;
+            perNode->next = perNode->next->next;
             free(tmp);
             return e;
         } else {
@@ -140,21 +140,21 @@ void PrintList(PList l) {
 }
 
 int isEmpty(PList l) {
-    return l->head==NULL;
+    return l->head == NULL;
 }
 
-int main(void){
+int main(void) {
     List l;
     ListInit(&l);
-    for(int i=1;i<=10;i++){
-        PushBack(&l,i);
+    for (int i = 1; i <= 10; i++) {
+        PushBack(&l, i);
         //printf("%d",i);
     }
     p(尾插10个数)
     //printf("ok");
     output
-    for(int i=20;i>10;i--){
-        PushFront(&l,i);
+    for (int i = 20; i > 10; i--) {
+        PushFront(&l, i);
     }
     p(头插10个数)
     output
@@ -164,46 +164,46 @@ int main(void){
     PopFront(&l);
     p(头删)
     output
-    InsertNode(&l,2,27);
+    InsertNode(&l, 2, 27);
     p(在2插入27)
     output
     p(删除3并输出节点值)
-    printf("%d\n",DelNode(&l,3));
+    printf("%d\n", DelNode(&l, 3));
     output
     free(&l);
 
-    List a,b;
+    List a, b;
     ListInit(&a);
     ListInit(&b);
-    for(int i=1;i<=10;i++){
-        PushBack(&a,i);
+    for (int i = 1; i <= 10; i++) {
+        PushBack(&a, i);
     }
-    for(int i=6;i<=15;i++){
-        PushBack(&b,i);
+    for (int i = 6; i <= 15; i++) {
+        PushBack(&b, i);
     }
     p(获得两个单链表)
     PrintList(&a);
     PrintList(&b);
     List c;
     ListInit(&c);
-    while(!isEmpty(&a)&&!isEmpty(&b)){
-        if(a.head->data<=b.head->data){
-            PushBack(&c,a.head->data);
+    while (!isEmpty(&a) && !isEmpty(&b)) {
+        if (a.head->data <= b.head->data) {
+            PushBack(&c, a.head->data);
             PopFront(&a);
         } else {
-            PushBack(&c,b.head->data);
+            PushBack(&c, b.head->data);
             PopFront(&b);
         }
     }
-    if(!isEmpty(&a)){
-        while(!isEmpty(&a)){
-            PushBack(&c,a.head->data);
+    if (!isEmpty(&a)) {
+        while (!isEmpty(&a)) {
+            PushBack(&c, a.head->data);
             PopFront(&a);
             p(test)
         }
     } else {
-        while(!isEmpty(&b)){
-            PushBack(&c,b.head->data);
+        while (!isEmpty(&b)) {
+            PushBack(&c, b.head->data);
             PopFront(&b);
         }
     }
