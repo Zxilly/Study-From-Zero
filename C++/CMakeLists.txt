@@ -28,3 +28,5 @@ add_executable(LQ_4.18_D Contest/LQ/4.18/LQ_4.18_D.cpp)
 
 add_executable(output_test grammar/C/output_test.c)
 add_executable(const_test Grammar/C/const_test.c)
+add_executable(a Work/6.2/a.c)
+add_executable(class Grammar/C++/class.cpp)
