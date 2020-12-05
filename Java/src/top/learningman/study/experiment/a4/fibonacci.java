@@ -20,9 +20,8 @@ public class fibonacci {
                 node_list[i] = new node(node_list[i - 1].value + node_list[i - 1].prev_value, node_list[i - 1].value);
             }
         }
-        for (node singlenode :
-                node_list) {
-            if(singlenode!=null){
+        for (node singlenode : node_list) {
+            if (singlenode != null) {
                 System.out.println(singlenode.value);
             } else {
                 break;
