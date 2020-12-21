@@ -1,4 +1,4 @@
-package top.learningman.study.study.operators;
+package top.learningman.study.study.types;
 
 public class Equivalence {
     public static void main (String[] args){

@@ -1,4 +1,4 @@
-package top.learningman.study.study.operators;
+package top.learningman.study.study.types;
 
 public class StringPlus {
     public static void main(String[] args){

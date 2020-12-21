@@ -1,6 +1,6 @@
 package top.learningman.study.study.object;
 
-public class overload {
+public class o_overload {
     public static int add(int a,int b){
         return a+b;
     }
