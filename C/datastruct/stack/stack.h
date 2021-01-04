@@ -19,7 +19,7 @@ typedef struct{
     DataType *base;
     DataType *top;
     int stack_size;
-}SqStack,*PSqStack;
+} __attribute__((aligned(32))) __attribute__((packed))SqStack,*PSqStack;
 
 void init(PSqStack s){
     s->base = (DataType*)malloc(STACK_SIZE*sizeof(DataType));
