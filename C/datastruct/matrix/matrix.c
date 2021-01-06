@@ -3,7 +3,7 @@
 //
 
 #include "matrix.h"
-#include<stdio.h>
+#include <stdio.h>
 
 //fastTransposeMatrix放置位置
 int main() {
