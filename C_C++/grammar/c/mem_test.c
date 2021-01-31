@@ -12,5 +12,4 @@ int main() {
         sum += 1024*1024;
         printf("sum=%lf\n", (double)sum/1024/1024);
     }
-
 }
