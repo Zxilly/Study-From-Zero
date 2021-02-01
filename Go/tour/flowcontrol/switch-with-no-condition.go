@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -9,7 +7,7 @@ import (
 
 func main() {
 	t := time.Now()
-	switch {
+	switch { // 用来代替连续 if-else
 	case t.Hour() < 12:
 		fmt.Println("Good morning!")
 	case t.Hour() < 17:

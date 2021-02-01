@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -10,7 +8,7 @@ import (
 func main() {
 	fmt.Println("When's Saturday?")
 	today := time.Now().Weekday()
-	switch time.Saturday {
+	switch time.Monday {
 	case today + 0:
 		fmt.Println("Today.")
 	case today + 1:

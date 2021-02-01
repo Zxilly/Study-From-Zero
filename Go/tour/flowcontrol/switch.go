@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -14,6 +12,8 @@ func main() {
 		fmt.Println("OS X.")
 	case "linux":
 		fmt.Println("Linux.")
+	case "windows":
+		fmt.Printf("fucking %s.\n", os)
 	default:
 		// freebsd, openbsd,
 		// plan9, windows...

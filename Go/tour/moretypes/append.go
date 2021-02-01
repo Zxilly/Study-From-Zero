@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import "fmt"
@@ -18,6 +16,9 @@ func main() {
 
 	// We can add more than one element at a time.
 	s = append(s, 2, 3, 4)
+	printSlice(s)
+
+	s = append(s, 2, 3, 4, 5, 6, 7, 8, 9)
 	printSlice(s)
 }
 

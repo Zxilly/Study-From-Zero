@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import "fmt"
@@ -9,5 +7,7 @@ func main() {
 	k := 3
 	c, python, java := true, false, "no!"
 
-	fmt.Println(i, j, k, c, python, java)
+	test := 666
+
+	fmt.Println(i, j, k, c, python, java, test)
 }

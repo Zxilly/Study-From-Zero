@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -7,11 +5,11 @@ import (
 	"math"
 )
 
-func pow(x, n, lim float64) float64 {
+func pow2(x, n, lim float64) float64 {
 	if v := math.Pow(x, n); v < lim {
 		return v
 	} else {
-		fmt.Printf("%g >= %g\n", v, lim)
+		fmt.Printf("%v >= %v\n", v, lim)
 	}
 	// can't use v here, though
 	return lim
@@ -19,7 +17,8 @@ func pow(x, n, lim float64) float64 {
 
 func main() {
 	fmt.Println(
-		pow(3, 2, 10),
-		pow(3, 3, 20),
+		pow2(3, 2, 10),
+		pow2(3, 3, 20),
+		pow2(3, 4, 30),
 	)
 }

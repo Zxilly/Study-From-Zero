@@ -1,10 +1,8 @@
-// +build OMIT
-
 package main
 
 import "fmt"
 
-var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024}
 
 func main() {
 	for i, v := range pow {

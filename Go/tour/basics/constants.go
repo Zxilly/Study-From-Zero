@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import "fmt"
@@ -12,5 +10,6 @@ func main() {
 	fmt.Println("Happy", Pi, "Day")
 
 	const Truth = true
+	const Constvar = "const"
 	fmt.Println("Go rules?", Truth)
 }

@@ -1,5 +1,3 @@
-// +build no-build OMIT
-
 package main
 
 import "fmt"
@@ -7,6 +5,11 @@ import "fmt"
 // fibonacci is a function that returns
 // a function that returns an int.
 func fibonacci() func() int {
+	pre, next := 1, 0
+	return func() int {
+		pre, next = next, pre+next
+		return pre
+	}
 }
 
 func main() {

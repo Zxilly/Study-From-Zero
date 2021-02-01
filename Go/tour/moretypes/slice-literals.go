@@ -1,20 +1,20 @@
-// +build OMIT
-
 package main
 
 import "fmt"
+
+type testA struct {
+	i int
+	b bool
+}
 
 func main() {
 	q := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println(q)
 
 	r := []bool{true, false, true, true, false, true}
-	fmt.Println(r)
+	fmt.Println(len(r))
 
-	s := []struct {
-		i int
-		b bool
-	}{
+	s := []testA{
 		{2, true},
 		{3, false},
 		{5, true},

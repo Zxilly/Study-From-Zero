@@ -1,8 +1,9 @@
-// +build no-run OMIT
-
 package main
+
+import "fmt"
 
 func main() {
 	for {
+		fmt.Println("new line")
 	}
 }
