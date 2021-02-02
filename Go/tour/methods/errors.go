@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -25,7 +23,9 @@ func run() error {
 }
 
 func main() {
-	if err := run(); err != nil {
+	err := run()
+	fmt.Printf("%v\n%T\n", err, err)
+	if err != nil {
 		fmt.Println(err)
 	}
 }

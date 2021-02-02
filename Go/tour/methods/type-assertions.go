@@ -1,5 +1,3 @@
-// +build no-run OMIT
-
 package main
 
 import "fmt"
@@ -16,6 +14,6 @@ func main() {
 	f, ok := i.(float64)
 	fmt.Println(f, ok)
 
-	f = i.(float64) // panic
-	fmt.Println(f)
+	k, _ := i.(float64) // panic // 不接受ok参数，断言会直接抛出错误
+	fmt.Println(k)
 }

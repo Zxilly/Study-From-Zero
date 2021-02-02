@@ -1,15 +1,19 @@
-// +build OMIT
-
 package main
 
 import "fmt"
 
 type I interface {
 	M()
+	N()
 }
 
 type T struct {
 	S string
+}
+
+func (t T) N() {
+	fmt.Println("this is N")
+	// panic("implement me")
 }
 
 // This method means type T implements the interface I,
@@ -19,6 +23,12 @@ func (t T) M() {
 }
 
 func main() {
-	var i I = T{"hello"}
+	var i I = T{S: "hello"}
+	j := T{"test"}
 	i.M()
+	i.N()
+
+	var test int = 1
+
+	fmt.Printf("%T %T %T", i, j, test)
 }

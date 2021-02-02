@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -7,15 +5,15 @@ import (
 	"math"
 )
 
-type I interface {
+type I2 interface {
 	M()
 }
 
-type T struct {
+type T2 struct {
 	S string
 }
 
-func (t *T) M() {
+func (t *T2) M() {
 	fmt.Println(t.S)
 }
 
@@ -26,9 +24,9 @@ func (f F) M() {
 }
 
 func main() {
-	var i I
+	var i I2
 
-	i = &T{"Hello"}
+	i = &T2{"Hello"}
 	describe(i)
 	i.M()
 
@@ -37,6 +35,6 @@ func main() {
 	i.M()
 }
 
-func describe(i I) {
+func describe(i I2) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }

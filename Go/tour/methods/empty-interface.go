@@ -1,20 +1,18 @@
-// +build OMIT
-
 package main
 
 import "fmt"
 
 func main() {
 	var i interface{}
-	describe(i)
+	describe7(i)
 
 	i = 42
-	describe(i)
+	describe7(i)
 
 	i = "hello"
-	describe(i)
+	describe7(i)
 }
 
-func describe(i interface{}) {
+func describe7(i interface{}) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }

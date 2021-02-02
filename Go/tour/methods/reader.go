@@ -1,5 +1,3 @@
-// +build OMIT
-
 package main
 
 import (
@@ -13,11 +11,13 @@ func main() {
 
 	b := make([]byte, 8)
 	for {
-		n, err := r.Read(b)
+		n, err := r.Read(b) // n 读到的字节数， err 错误
+
+		if err == io.EOF {
+			return
+		}
+
 		fmt.Printf("n = %v err = %v b = %v\n", n, err, b)
 		fmt.Printf("b[:n] = %q\n", b[:n])
-		if err == io.EOF {
-			break
-		}
 	}
 }
