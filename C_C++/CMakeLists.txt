@@ -14,3 +14,8 @@ add_executable(multidimensional_array_announce grammar/c/multidimensional_array_
 add_executable(vararr2d res/CPrimerPlus/Ch10/vararr2d.c)
 add_executable(pointer_test grammar/c/pointer_test.cpp)
 add_executable(mem_test grammar/c/mem_test.c)
+add_executable(VLA_test grammar/c/VLA_test.c)
+add_executable(compound_literal_test grammar/c/compound_literal_test.c)
+add_executable(array_as_function_parameters_test grammar/c/array_as_function_parameters_test.c)
+add_executable(more_constant_test grammar/c/more_constant_test.c)
+add_executable(string grammar/c/string.c)
