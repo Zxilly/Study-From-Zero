@@ -1,6 +1,6 @@
-a = (x * x for x in range(20))
+ac = (x * x for x in range(20))
 
-for i in a:
+for i in ac:
     print(i)
 
 
