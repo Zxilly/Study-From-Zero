@@ -1,3 +1,4 @@
+
 def consumer():
     r = ''
     while True:
@@ -9,7 +10,8 @@ def consumer():
 
 
 def produce(c):
-    c.send(None)
+    # c.send(None) # 激活生成器
+    next(c)
     n = 0
     while n < 5:
         n = n + 1
