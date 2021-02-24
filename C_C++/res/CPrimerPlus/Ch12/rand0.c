@@ -1,5 +1,5 @@
 /* rand0.c –– produces random numbers            */
-/*               uses ANSI C portable algorithm  */
+/*               uses ANSI C portable logic  */
 static unsigned long int next = 1;  /* the seed  */
 
 unsigned int rand0(void)

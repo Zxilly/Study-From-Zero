@@ -1,5 +1,5 @@
 /* s_and_r.c -- file for rand1() and srand1()    */
-/*                uses ANSI C portable algorithm */
+/*                uses ANSI C portable logic */
 static unsigned long int next = 1;  /* the seed  */
 
 int rand1(void)

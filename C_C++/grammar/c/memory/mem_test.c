@@ -10,6 +10,6 @@ int main() {
     while (malloc(1024*1024))
     {
         sum += 1024*1024;
-        printf("sum=%lf\n", (double)sum/1024/1024);
+        printf("sum=%lf M\n", (double)sum/1024/1024);
     }
 }
