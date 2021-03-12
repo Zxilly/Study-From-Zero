@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <time.h>
 
 int main() {
-    printf("Hello,World");
+    printf("%ld",time(NULL));
     return 0;
 }

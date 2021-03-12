@@ -3,13 +3,11 @@
 //
 #include <stdio.h>
 #include <malloc.h>
+#include <time.h>
 
 
 int main() {
-    long long sum = 0;
-    while (malloc(1024*1024))
-    {
-        sum += 1024*1024;
-        printf("sum=%lf M\n", (double)sum/1024/1024);
-    }
+    time_t tmp = time(NULL);
+    struct tm *tmptime = localtime(&tmp);
+    printf("%d",tmptime->tm_wday);
 }
