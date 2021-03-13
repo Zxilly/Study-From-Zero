@@ -10,3 +10,10 @@
 2. 在构造函数中 `this.function = this.function.bind(this)`
 
 3. 在回调函数中使用箭头函数
+
+
+### `key` prop 被传递给 React， 组件无法获取
+
+解决方案：
+
+别用
