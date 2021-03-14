@@ -4,8 +4,8 @@ interface EssayFormState {
     value: string
 }
 
-class EssayForm extends React.Component<any, EssayFormState> {
-    constructor(props: any) {
+class EssayForm extends React.Component<{}, EssayFormState> {
+    constructor(props: {}) {
         super(props);
         this.state = {
             value: '请撰写一篇关于你喜欢的 DOM 元素的文章.'
