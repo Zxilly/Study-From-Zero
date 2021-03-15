@@ -1,6 +1,7 @@
 import React from 'react';
 // import EssayForm from "./testComponent/Textarea";
-import EffectHook from "./hooks/EffectHook";
+// import EffectHook from "./hooks/EffectHook";
+import StateHook from "./hooks/StateHook";
 // import Nested from "./testComponent/Nested";
 // import UnexpectedNested from "./testComponent/UnexpectedNested";
 // import Reservation from "./testComponent/MulitSelect";
@@ -28,7 +29,8 @@ function App() {
             {/*<Reservation/>*/}
             {/*<Nested/>*/}
             {/*<UnexpectedNested/>*/}
-            <EffectHook/>
+            {/*<EffectHook/>*/}
+            <StateHook/>
         </div>
     );
 }
