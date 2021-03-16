@@ -1,6 +1,6 @@
 package top.learningman.study.study.object;
 
-public class o_implement implements o_interface{
+public class O_implement implements O_interface {
     @Override
     public void a() {
         System.out.println("A");

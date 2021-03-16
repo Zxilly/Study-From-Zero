@@ -1,11 +1,11 @@
 package top.learningman.study.study.statement;
 
-public class s_for {
-    public static void main(String[] args){
-        for (int i=1;i<5;i++){
-            for (int j=1;j<5;j++){
+public class S_for {
+    public static void main(String[] args) {
+        for (int i = 1; i < 5; i++) {
+            for (int j = 1; j < 5; j++) {
                 System.out.println("A");
-                if(j==2){
+                if (j == 2) {
                     break;
                 }
             }
@@ -14,10 +14,11 @@ public class s_for {
 
         System.out.println("-------------------------");
 
-        outer:for (int i=1;i<5;i++){
-            for (int j=1;j<5;j++){
+        outer:
+        for (int i = 1; i < 5; i++) {
+            for (int j = 1; j < 5; j++) {
                 System.out.println("A");
-                if(j==2){
+                if (j == 2) {
                     break outer;
                 }
             }

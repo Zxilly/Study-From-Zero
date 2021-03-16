@@ -1,7 +1,7 @@
 package top.learningman.study.study.object;
 
 
-public class o_lambda {
+public class O_lambda {
     public static void main(String[] args){
         String name = "a";
         anshout(new Animal() {

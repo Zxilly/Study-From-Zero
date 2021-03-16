@@ -1,6 +1,6 @@
 package top.learningman.study.study.object;
 
-public class o_abstract {
+public class O_abstract {
     int c;
     public abstract class a{
         public abstract void ab();
