@@ -4,7 +4,7 @@ public class parent {
     public int day;
     public int month;
 
-    public parent(){
+    public parent(int arg){
         this.day = 0;
         this.month = 0;
         System.out.println("test");

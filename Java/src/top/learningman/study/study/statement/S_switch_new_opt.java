@@ -9,7 +9,7 @@ public class S_switch_new_opt {
         var b = switch (a){
             case "test" -> {
                 System.out.println("Side Effect");
-
+                yield 40;
             }
             case "str" -> 20;
             default -> throw new IllegalStateException("Unexpected value: " + a);

@@ -6,7 +6,7 @@ interface Animal{
     void shout2();
 }
 
-public class o_annoymous_inner_class {
+public class O_annoymous_inner_class {
     public static void main(String[] args){
         String name = "a";
         anshout(new Animal() {
