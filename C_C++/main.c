@@ -2,6 +2,7 @@
 #include <time.h>
 
 int main() {
-    printf("%ld",time(NULL));
+    int a=0;
+    printf("%lld",time(NULL));
     return 0;
 }

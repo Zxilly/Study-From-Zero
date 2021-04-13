@@ -18,6 +18,8 @@ int main() {
     char *pe = pc;
     pe[3] = 'a';
 
+    const const const int a = 1;
+
     printf("%s",pc);
 
     return 0;
