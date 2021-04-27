@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     char lineBuffer[100001];
-    char lineBufferLength = 0;
+    int lineBufferLength = 0;
     char ch;
     int win = 0, lose = 0;
 
