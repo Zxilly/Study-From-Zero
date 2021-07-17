@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>top.learningman</groupId>
-    <artifactId>servlet</artifactId>
+    <artifactId>Servlet</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>servlet</name>
+    <name>Servlet</name>
     <packaging>war</packaging>
 
     <properties>
@@ -18,9 +18,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>8.0.1</version>
+            <groupId>javax.mvc</groupId>
+            <artifactId>javax.mvc-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

@@ -1,6 +1,7 @@
-package top.learningman.servlet;
+package top.learningman.Servlet;
 
 import java.io.*;
+import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
@@ -8,7 +9,7 @@ import javax.servlet.annotation.*;
 public class HelloServlet extends HttpServlet {
     private String message;
 
-    public void init() {
+    public void init(ServletConfig config) {
         message = "Hello World!";
     }
 
