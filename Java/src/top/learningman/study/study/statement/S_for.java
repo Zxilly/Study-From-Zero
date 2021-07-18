@@ -2,6 +2,8 @@ package top.learningman.study.study.statement;
 
 import top.learningman.study.Utils;
 
+import java.util.Arrays;
+
 public class S_for {
     public static void main(String[] args) {
         for (int i = 1; i < 5; i++) {
@@ -34,5 +36,28 @@ public class S_for {
             System.out.println(i);
         }
 
+        Utils.Println("-------------------------------");
+
+        int[] aa = {2, 3, 4, 5, 6, 7, 8};
+        System.out.println(Arrays.toString(aa));
+
+        Utils.Println("-------------------------------");
+
+        int[][][] ns = {
+                {
+                        {1, 2, 3},
+                        {4, 5, 6},
+                        {7, 8, 9}
+                },
+                {
+                        {10, 11},
+                        {12, 13}
+                },
+                {
+                        {14, 15, 16},
+                        {17, 18}
+                }
+        };
+        System.out.println(Arrays.deepToString(ns));
     }
 }

@@ -1,4 +1,4 @@
-package top.learningman.study.study.types;
+package top.learningman.study.study.types.prototype;
 
 import static top.learningman.study.Utils.Println;
 

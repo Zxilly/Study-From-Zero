@@ -1,4 +1,4 @@
-package top.learningman.study.study.types;
+package top.learningman.study.study.types.prototype;
 
 public class StringPlus {
     public static void main(String[] args){

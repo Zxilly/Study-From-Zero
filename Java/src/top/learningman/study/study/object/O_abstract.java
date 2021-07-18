@@ -12,4 +12,9 @@ public class O_abstract {
             int b=c;
         }
     }
+
+    public static void main(String[] args) {
+
+    }
+
 }
