@@ -8,14 +8,12 @@ import java.io.InputStream;
 public class I_fileInputStream {
     public static void main(String[] args) throws IOException {
         // 创建一个FileInputStream对象:
-        InputStream input = new FileInputStream(new File("../I_file.java"));
-        for (;;) {
-            int n = input.read(); // 反复调用read()方法，直到返回-1
-            if (n == -1) {
-                break;
+        try (InputStream input = new FileInputStream("C:\\Study\\Code\\Java\\src\\top\\learningman\\study\\study\\io\\I_file.java")) {
+            // try-resource 要求对象实现 java.lang.AutoCloseable 接口
+            int n;
+            while ((n = input.read()) != -1) { // 利用 while 同时读取并判断， read 是阻塞的
+                System.out.print((char)n);
             }
-            System.out.println(n); // 打印byte的值
         }
-        input.close(); // 关闭流
     }
 }
