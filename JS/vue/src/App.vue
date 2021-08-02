@@ -8,24 +8,14 @@
 </template>
 
 <script>
+import PasteClient from "pastebin-api";
+
 export default {
   name: 'App',
   components: {},
   methods: {
     test: function () {
-      const {Authorizer} = require("casbin.js");
-      const sub = "testUser";
-      const obj = "/upload/*";
-      const act = "read";
-      const url = `http://localhost:3000/permissions`;
-      const auth = new Authorizer(
-          "auto", // mode
-          {endpoint: url}
-      );
-      auth.setUser(sub).then(() => {
-        // eslint-disable-next-line no-unused-vars
-        const perms = auth.can(act, obj);
-      });
+      const client = new PasteClient("DEV_KEY_HERE");
     }
   }
 }
