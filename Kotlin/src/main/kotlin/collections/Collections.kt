@@ -1,4 +1,4 @@
-package top.learningman.study
+package top.learningman.study.collections
 
 fun main() {
     val items = listOf("apple", "banana", "kiwifruit")

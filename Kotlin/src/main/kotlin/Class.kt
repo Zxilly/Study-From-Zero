@@ -1,6 +1,6 @@
 package top.learningman.study
 
-class Shape(var height: Int, var length: Double) { // 使用 var 和 val 可以使得传入变量在当前类中被实例化
+class Shape1(override var height: Int, override var length: Double) : Shape() { // 使用 var 和 val 可以使得传入变量在当前类中被实例化
     var aa = height * length
 }
 
@@ -14,8 +14,13 @@ open class Shape3(height: Int, length: Double) {
     }
 }
 
-class Shape4(val aa: Int, val bb: Double) : Shape3(aa, bb) {
+class Shape4(private val aa: Int, private val bb: Double) : Shape3(aa, bb) {
     init {
         var sth = aa - bb
     }
+}
+
+abstract class Shape {
+    abstract var height: Int
+    abstract var length: Double
 }
