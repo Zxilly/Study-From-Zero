@@ -64,6 +64,14 @@ class MainActivity : AppCompatActivity() {
             sendBroadcast(intent)
         }
 
+        button9.setOnClickListener {
+            startActivity(Intent(this, ThreadActivity::class.java))
+        }
+
+        button10.setOnClickListener {
+            startActivity(Intent(this, ServiceActivity::class.java))
+        }
+
         Log.i("MainActivity", "onCreate setup.")
     }
 

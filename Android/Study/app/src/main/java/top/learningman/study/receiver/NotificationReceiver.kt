@@ -27,17 +27,19 @@ class NotificationReceiver : BroadcastReceiver() {
         manager.createNotificationChannel(channel)
 
         val priIntent = Intent(context, ListActivity::class.java)
-        val pi = PendingIntent.getActivity(context, 0 ,priIntent,PendingIntent.FLAG_IMMUTABLE)
+        val pi = PendingIntent.getActivity(context, 0, priIntent, PendingIntent.FLAG_IMMUTABLE)
+
+        val id = intent.getIntExtra("NotifyID", get());
 
         val notification = NotificationCompat.Builder(context, "normal")
             .setContentTitle("This is title")
-            .setContentText("This is text")
+            .setContentText("This is ID $id notification")
             .setSmallIcon(R.drawable.ic_stat_name)
             .setContentIntent(pi)
             .setAutoCancel(true)
             .build()
-        manager.notify(get(), notification)
+        manager.notify(id, notification)
 
-        Log.w("Notify", "ID is ${get()}")
+        Log.w("Notify", "ID is ${id}")
     }
 }
