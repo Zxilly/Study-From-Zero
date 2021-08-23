@@ -63,5 +63,4 @@ dkms.conf
 
 cmake-build-*/
 
-
-
+*.tmp
