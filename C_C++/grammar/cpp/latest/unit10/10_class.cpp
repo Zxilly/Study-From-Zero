@@ -14,11 +14,13 @@ private:
     }
 
 public:
-    Stock(long n);
-
+    Stock();
+    Stock(long n); // NOLINT(google-explicit-constructor)
     Stock(const std::string &test, long n);
 
     ~Stock();
+
+    Stock self() const;
 
     void buy(long num, double price) const; // 可用于const对象
 
@@ -39,6 +41,10 @@ void Stock::buy(long num, double price) const {
 
 }
 
+Stock Stock::self() const {
+    return *this;
+}
+
 Stock::~Stock() {
     std::cout << "Bye Bye";
 }
@@ -46,6 +52,11 @@ Stock::~Stock() {
 Stock::Stock(long n) {
     company = "test";
     share = n;
+}
+
+Stock::Stock() {
+    company = "";
+    share = 0;
 }
 
 int main() {
