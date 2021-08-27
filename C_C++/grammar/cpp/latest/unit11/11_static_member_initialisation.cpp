@@ -8,4 +8,4 @@ public:
     const static int t3 = 20; // 整形或者枚举型 const 可以在声明中被初始化
 };
 
-int Test::test = 200; // 在类方法文件中初始化静态成员。
+int Test::test = 200; // 只能在类方法文件中初始化静态成员。

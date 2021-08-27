@@ -6,7 +6,7 @@
 
 class Test {
 private:
-    int value;
+    int value = 50;
 public:
     Test() {
         (*this).value = 20;

@@ -38,5 +38,5 @@ int main() {
     }
     p[10] = '\0';
     std::cout << p;
-
+    return 0;
 }

@@ -6,7 +6,7 @@
 
 class number0 {
 private:
-    int value;
+    int value = 30;
 public:
     number0() {
         value = 0;
