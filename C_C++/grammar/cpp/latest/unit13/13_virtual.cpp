@@ -19,6 +19,10 @@ public:
     virtual Base &self() {
         return *this;
     }
+
+    void test2() {
+        std::cout << "Fuck" << std::endl;
+    }
     // friend 不能为 virtual
 };
 
@@ -28,8 +32,16 @@ public:
         std::cout << "Extend Test" << std::endl;
     }
 
+    void test2() {
+        std::cout << "Being Fucked" << std::endl;
+    }
+
     Extend &self() override {
         return *this; // 返回类型协变
+    }
+
+    void out() const override {
+
     }
 
     ~Extend() override {
@@ -40,14 +52,16 @@ public:
 int main() {
     //Extend a;
     //a.test();
-    Base *array[20];
-    for (int i = 0; i < 20; i++) {
-        array[i] = i % 2 ? new Base : new Extend;
-    }
-    for (Base *pt: array) {
-        pt->test();
-    }
-    for (auto &i: array) {
-        delete i;
-    }
+//    Base *array[20];
+//    for (int i = 0; i < 20; i++) {
+//        array[i] = i % 2 ? new Base : new Extend;
+//    }
+//    for (Base *pt: array) {
+//        pt->test();
+//    }
+//    for (auto &i: array) {
+//        delete i;
+//    }
+    Extend a;
+    a.test2();
 }
