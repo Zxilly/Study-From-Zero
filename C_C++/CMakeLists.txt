@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 project(C__)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
 
 
@@ -76,3 +76,11 @@ add_executable(14_private_inherit grammar/cpp/latest/unit14/14_private_inherit.c
 add_executable(14_virtual_inherit_class grammar/cpp/latest/unit14/14_virtual_inherit_class.cpp)
 add_executable(14_class_template grammar/cpp/latest/unit14/14_class_template.cpp)
 add_executable(14_specialization grammar/cpp/latest/unit14/14_specialization.cpp)
+add_executable(14_template_alias grammar/cpp/latest/unit14/14_template_alias.cpp)
+add_executable(15_friend_class grammar/cpp/latest/unit15/15_friend_class.cpp)
+add_executable(15_nested_class grammar/cpp/latest/unit15/15_nested_class.cpp)
+add_executable(15_abort grammar/cpp/latest/unit15/15_abort.cpp)
+add_executable(15_exception grammar/cpp/latest/unit15/15_exception.cpp)
+add_executable(15_rtti grammar/cpp/latest/unit15/15_rtti.cpp)
+add_executable(15_cast grammar/cpp/latest/unit15/15_cast.cpp)
+add_executable(16_smart_pointer grammar/cpp/latest/unit16/16_smart_pointer.cpp)
