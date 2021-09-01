@@ -22,6 +22,10 @@ enum class T4 : short {
     A, B, C, D, E
 };
 
+enum struct T5 {
+    A, B, C, D, E
+};
+
 int main() {
     T1 a = A;
     T3 b = T3::A;// 无法隐式转换为 int， 但是可以显式强制转换
