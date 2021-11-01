@@ -5,4 +5,9 @@ fun main(args: Array<String>) {
 
     // Try adding program arguments at Run/Debug configuration
     println("Program arguments: ${args.joinToString()}")
+
+    val a = "AAA"
+    val b = "AAA"
+
+    println(a === b)
 }
