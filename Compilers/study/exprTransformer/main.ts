@@ -72,6 +72,3 @@ for (const token of tokens) {
   reBuild += token.value;
 }
 console.log(reBuild);
-
-for (const token of tokens) {
-}
