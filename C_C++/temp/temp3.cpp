@@ -6,16 +6,8 @@ using namespace std;
 
 int main() {
     ios::sync_with_stdio(false);
-    int t;
-    cin >> t;
-    while (t--) {
-
-        double a, b, c, p;
-        cin >> a >> b >> c;
-        p = (a + b + c) / 2;
-        double sum = sqrt(p * (p - a) * (p - b) * (p - c));
-        cout << fixed << setprecision(2) << sum << endl;
-    }
+    int a[10];
+    a[20] = 3;
 
     return 0;
 }
