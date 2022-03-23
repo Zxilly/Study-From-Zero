@@ -3,9 +3,6 @@ project(C__)
 
 set(CMAKE_CXX_STANDARD 17)
 
-
-
-
 #add_executable(b homework/experiment/b.c)
 #add_executable(qsort logic/algorithm/sort/qsort.c)
 #add_executable(ctype_test grammar/c/ctype_test.c)
@@ -129,3 +126,8 @@ add_executable(JGSU_T1008 contest/JGSU_OJ/JGSU_T1008.cpp)
 add_executable(JGSU_T1007 contest/JGSU_OJ/JGSU_T1007.cpp)
 add_executable(JGSU_T1009 contest/JGSU_OJ/JGSU_T1009.cpp)
 add_executable(I contest/ICPC/2018ECF/I.cpp)
+add_executable(JGSU_LQ2118 contest/JGSU_OJ/JGSU_LQ2118.cpp)
+add_executable(JGSU_LQ2119 contest/JGSU_OJ/JGSU_LQ2119.cpp)
+add_executable(JGSU_LQ2121 contest/JGSU_OJ/JGSU_LQ2121.cpp)
+add_executable(JGSU_LQ2120 contest/JGSU_OJ/JGSU_LQ2120.cpp)
+add_executable(E125_A "contest/Codeforces/#E125(Div.2)/E125_A.cpp")
