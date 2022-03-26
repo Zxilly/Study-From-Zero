@@ -2,6 +2,8 @@
 
 using namespace std;
 
+// https://ac.nowcoder.com/acm/contest/1195/H?&headNav=acm
+
 enum class LineStatus {
     CLEAR,
     PENDING,
