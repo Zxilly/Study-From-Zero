@@ -17,15 +17,15 @@ struct Location {
 };
 
 Location la[1005];
-int fa[1005];
+long long fa[1005];
 
-int find(int x) {
+int find(long long x) {
     if (x != fa[x])
         fa[x] = find(fa[x]);
     return fa[x];
 }
 
-void unionSet(int x, int y) {
+void unionSet(long long x, long long y) {
     x = find(x);
     y = find(y);
     fa[x] = y;
