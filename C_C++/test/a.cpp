@@ -1,22 +1,14 @@
-//
-// Created by zxilly on 2020/11/13.
-//
-
-#include <cstdio>
+#include <iostream>
+#include <ctime>
 
 using namespace std;
+const int maxn = 1e5 + 5;
 
-void customSwap(int &a,int &b){
-    int c;
-    c = a;
-    a = b;
-    b = c;
-}
-
-int main(){
-    int a=1,b=2;
-    printf("%d %d\n",a,b);
-    customSwap(a,b);
-    printf("%d %d\n",a,b);
+int main() {
+    time_t t = 100000000000LL;
+    tm time = *gmtime(&t);
+    char ch[100];
+    strftime(ch, sizeof(ch), "%H:%M:%S", &time);
+    cout << ch << endl;
     return 0;
 }
