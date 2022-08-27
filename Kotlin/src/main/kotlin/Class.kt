@@ -12,12 +12,21 @@ open class Shape3(height: Int, length: Double) {
     init {
         var something = height + length
     }
+
+    open fun a():Int {
+        return 1
+    }
 }
 
 class Shape4(private val aa: Int, private val bb: Double) : Shape3(aa, bb) {
     init {
         var sth = aa - bb
     }
+
+    override fun a(): Int {
+        return aa
+    }
+
 }
 
 abstract class Shape {
