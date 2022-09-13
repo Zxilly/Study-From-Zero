@@ -45,6 +45,7 @@ namespace Vars
         
         static unsafe void Unsafe()
         {
+            var t = 1.2345;
             int a = 1;
             int b = 2;
             int* ap = &a;

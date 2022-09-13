@@ -2,28 +2,20 @@
 
 using namespace std;
 
-struct A
-{
-    short var;
-    int var1;
-    long var2;
-    char var3;
-    string s;
-};
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        double attack;
+        int resist[4];
+        cin >> attack;
+        cin >> resist[0] >> resist[1] >> resist[2] >> resist[3];
 
-int main()
-{
-    short var;
-    int var1;
-    long var2;
-    char var3;
-    string s;
-    A ex1;
-    cout << sizeof(var) << endl;  // 2 short
-    cout << sizeof(var1) << endl; // 4 int
-    cout << sizeof(var2) << endl; // 8 long
-    cout << sizeof(var3) << endl; // 1 char
-    cout << sizeof(s) << endl;    // 8 string
-    cout << sizeof(ex1) << endl;  // 32 struct
-    return 0;
+        double count = 0;
+        for (int i: resist) {
+            count += int(attack * (double) (100 - i) / 100);
+            attack *= 0.85;
+        }
+        cout << (int) count << endl;
+    }
 }
